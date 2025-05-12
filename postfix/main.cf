@@ -35,7 +35,7 @@ smtp_tls_session_cache_database = btree:${data_directory}/smtp_scache
 
 smtpd_relay_restrictions = permit_mynetworks permit_sasl_authenticated defer_unauth_destination
 myhostname = monserveur.local
-mydomain = local
+mydomain = localhost
 alias_maps = hash:/etc/aliases
 alias_database = hash:/etc/aliases
 myorigin = /etc/mailname
@@ -45,5 +45,5 @@ mynetworks = 127.0.0.0/8
 home_mailbox = Maildir/
 mailbox_size_limit = 0
 recipient_delimiter = +
-inet_interfaces = loopback-only
-inet_protocols = ipv4
+inet_interfaces = all
+inet_protocols = all
